@@ -1,16 +1,14 @@
 public class MyStack<T> {
-    private int maxSize;
     private int top;
     private Object[] stackArray;
 
     public MyStack(int size) {
-        maxSize = size;
-        stackArray = new Object[maxSize];
+        stackArray = new Object[size];
         top = -1;
     }
 
     public void push(T value) {
-        if (top < maxSize - 1) {
+        if (top < stackArray.length - 1) {
             stackArray[++top] = value;
         } else {
             System.out.println("Стек переполнен. Невозможно добавить элемент.");
@@ -42,10 +40,10 @@ public class MyStack<T> {
     }
 
     public boolean isFull() {
-        return top == maxSize - 1;
+        return top == stackArray.length - 1;
     }
 
     public int getSize(){
-        return maxSize;
+        return stackArray.length;
     }
 }

@@ -2,7 +2,8 @@
 public class Main{
 
     public static void main(String[] args) {
-        MyStack<Integer> intStack = new MyStack<>(5);
+
+       MyStack<Integer> intStack = new MyStack<>(5);
 
         intStack.push(1);
         intStack.push(2);
